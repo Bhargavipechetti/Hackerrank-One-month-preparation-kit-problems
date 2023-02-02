@@ -1,0 +1,33 @@
+/* Plus-Minus*/
+class Result {
+    public static void miniMaxSum(List<Integer> arr) {
+        int n=arr.size();
+        int sum=0;
+        int min = arr.get(0);
+        int max = arr.get(0);
+        for(int i=0;i<n;i++){
+            sum=sum+arr.get(i);
+        }
+            for(int i=0;i<n;i++){
+                n.get(i)=sum-arr.get(i);
+            }
+
+        for(int j=1;j<n;j++){
+            if(n.get(j)<min){
+                min=n.get(j);
+            }
+            if(n.get(j)>max){
+            max=n.get(j);
+            }
+        }
+        System.out.println(min+" "+max);
+    }
+}
+
+/*Diagonal Difference*/
+
+def diagonalDifference(arr):
+    
+   d1 = sum([arr[x][x] for x in range(len(arr))])
+   d2 = sum([arr[x][n - 1- x] for x in range(len(arr))])
+   return(abs(d1 - d2))
