@@ -1,4 +1,123 @@
+/*Counting sort1*/
+
+def countingSort(arr):
+    dict1={}
+    for i in range(0,100):
+        dict1[i]=0
+    for j in (arr):
+        if j  in dict1.keys():
+            #dict1[i]=0
+        #else:
+            dict1[j]+=1
+        
+    return dict1.values()
+
+
+/*Pangrams*/
+def pangrams(s):
+    s = s.replace(" ", "").lower()
+    if len(set(map(str, s))) == 26:
+        return "pangram"
+    return "not pangram"
+
+
+/*Sparse Arrays*/
+
+class Result {
+    public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {Map<String, Integer> map = new HashMap<>();
+        List<Integer> res = new ArrayList<>();
+
+        for (String s : strings) {
+            if (!map.containsKey(s)) {
+                map.put(s, 1);
+            } else {
+                map.put(s, map.get(s) + 1);
+            }
+        }
+
+        for (String q : queries) {
+            if (map.containsKey(q)) {
+                res.add(map.get(q));
+            } else {
+                res.add(0);
+            }
+        }
+
+        return res;
+    }
+}
+
+
+/*Flipping Bits*/
+
+class Result {
+     public static long flippingBits(long n) {
+        
+        String bR = getBinary(n);
+        
+        String temp = "";
+        
+        for(int i = 0; i < bR.length(); i++) {
+            Character c = bR.charAt(i);
+            
+            if(c.toString().equals("1")) {
+                temp = temp + "0";
+            } else {
+                temp = temp + "1";
+            }
+        }
+    
+        return Long.parseUnsignedLong(temp, 2);
+    }
+    
+    public static String getBinary(long n) {
+        
+        String result = Long.toBinaryString(n);
+        
+        return String.format("%32s", result).replaceAll(" ", "0");
+    }
+}
+
+
+/*Diagonal Difference*/
+
+class Result {
+    public static int diagonalDifference(List<List<Integer>> arr) {
+        
+        int difference = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            difference += arr.get(i).get(i) - arr.get(i).get((arr.get(i).size()-1)-i);
+        }
+        
+        return Math.abs(difference);
+}
+}
+
+   
+/*Lonely Integer*/
+
+class Result {
+    public static int lonelyinteger(List<Integer> a) {
+    BitSet bits = new BitSet(a.size());
+    for(Integer i:a){
+        bits.flip(i);
+    }
+    return bits.nextSetBit(0);
+    }
+}
+
+
+/*Mini-Max Sum*/
+
+def miniMaxSum(arr):
+    arr = sorted(arr)
+    minSum = sum(arr[:4])
+    maxSum = sum(arr[-4:])
+    print(minSum, maxSum)
+    
+
 /* Plus-Minus*/
+
 class Result {
     public static void miniMaxSum(List<Integer> arr) {
         int n=arr.size();
@@ -24,10 +143,8 @@ class Result {
     }
 }
 
-/*Diagonal Difference*/
 
-def diagonalDifference(arr):
-    
-   d1 = sum([arr[x][x] for x in range(len(arr))])
-   d2 = sum([arr[x][n - 1- x] for x in range(len(arr))])
-   return(abs(d1 - d2))
+
+
+
+
