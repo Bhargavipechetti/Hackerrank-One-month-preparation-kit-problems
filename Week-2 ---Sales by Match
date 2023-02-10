@@ -1,0 +1,21 @@
+
+class Result {
+
+    public static int sockMerchant(int n, List<Integer> ar) {
+    int pairs = 0;
+    Collections.sort(ar);
+
+    for(int i = 0; i < n - 1;) {
+        if(ar.get(i) == ar.get(i+1)) {
+            pairs++;
+            i+=2;
+        }
+        else {
+            i++;
+        }
+    }
+
+    return pairs;
+}
+
+}
