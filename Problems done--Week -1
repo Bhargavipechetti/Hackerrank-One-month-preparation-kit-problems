@@ -9,10 +9,18 @@ def twoArrays(k, A, B):
     return 'YES'
 
 
+
+
+
+
 /* Subarray Division*1/
 
 def birthday(s, d, m):
     return len([1 for i in range(len(s)) if sum(s[i:i + m]) == d])
+
+
+
+
 
 
 /*Time conversion*/
@@ -29,6 +37,10 @@ def timeConversion(s):
        return str(str(ans) + s[2:8]) 
        
 
+
+
+
+
 /*Counting sort1*/
 
 def countingSort(arr):
@@ -44,12 +56,22 @@ def countingSort(arr):
     return dict1.values()
 
 
+
+
+
+
+
 /*Pangrams*/
 def pangrams(s):
     s = s.replace(" ", "").lower()
     if len(set(map(str, s))) == 26:
         return "pangram"
     return "not pangram"
+
+
+
+
+
 
 
 /*Sparse Arrays*/
@@ -77,6 +99,12 @@ class Result {
         return res;
     }
 }
+
+
+
+
+
+
 
 
 /*Flipping Bits*/
@@ -110,6 +138,13 @@ class Result {
 }
 
 
+
+
+
+
+
+
+
 /*Diagonal Difference*/
 
 class Result {
@@ -125,6 +160,13 @@ class Result {
 }
 
    
+
+
+
+
+
+
+
 /*Lonely Integer*/
 
 class Result {
@@ -138,6 +180,11 @@ class Result {
 }
 
 
+
+
+
+
+
 /*Mini-Max Sum*/
 
 def miniMaxSum(arr):
@@ -146,6 +193,11 @@ def miniMaxSum(arr):
     maxSum = sum(arr[-4:])
     print(minSum, maxSum)
     
+
+
+
+
+
 
 /* Plus-Minus*/
 
