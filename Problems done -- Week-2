@@ -1,3 +1,32 @@
+/**Caesar Cipher**/
+
+def caesarCipher(s, k):
+    alpha_lower = "abcdefghijklmnopqrstuvwxyz"
+    alpha_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    result = ""
+
+    for letter in s:
+        if letter.isupper():
+            alphabet = alpha_upper
+        else:
+            alphabet = alpha_lower
+
+        index = alphabet.find(letter)
+        if index >= 0:
+            if (index + k)/len(alphabet) < 1:
+                result += alphabet[index+k]
+            else:
+                result += alphabet[(index + k) % len(alphabet)]
+        else:
+            result += letter
+    
+    return(result)
+    
+    
+    
+    
+
 /**Dynamic Array **/
 
 
