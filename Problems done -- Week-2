@@ -1,3 +1,25 @@
+/**Dynamic Array **/
+
+
+def dynamicArray(n, queries):
+    ans = []
+    arr = []
+    for _ in range(n):
+        arr.append([])
+    last_answer = 0
+    for q in queries:
+        idx = (q[1] ^ last_answer) % n 
+        if q[0] == 1:
+            arr[idx].append(q[2])
+        else:
+            last_answer = arr[idx][q[2] % len(arr[idx])]
+            ans.append(last_answer)
+    return ans
+    
+    
+    
+
+
 /**Sales by Match**/
 
 
