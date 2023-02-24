@@ -1,4 +1,25 @@
+/** Apple and Orange**/
+
+
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    num_of_apples = 0
+    num_of_oranges = 0
+    for i in apples:
+        if s <= a + i <= t:
+            num_of_apples += 1
+    for j in oranges:
+        if s <= b + j <= t:
+            num_of_oranges += 1
+    print(num_of_apples)
+    print(num_of_oranges)
+    
+    
+    
+    
+
+
 /**Grading Students**/
+
 
 def gradingStudents(grades_list):
     rounded_grades=[]
