@@ -1,10 +1,14 @@
 /**Grading Students**/
 
-def gradingStudents(grades):
-    for i in range(len(grades)):
-        if(grades[i]>37):
-            if((grades[i]%5)==3):
-                grades[i]+=2
-            elif((grades[i]%5)==4):
-                grades[i]+=1
-    return (grades)
+def gradingStudents(grades_list):
+    rounded_grades=[]
+    for i in grades_list:
+        if i<38:
+            rounded_grades.append(i)
+        else:
+            diff=5-(i%5)
+            if diff<3:
+                rounded_grades.append(i+diff)
+            else:
+                rounded_grades.append(i)
+    return rounded_grades
