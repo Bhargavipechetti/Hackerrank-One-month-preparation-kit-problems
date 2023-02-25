@@ -1,4 +1,25 @@
+/**Breaking the Records**/
+
+
+def breakingRecords(scores):
+    min_score = max_score = scores[0]
+    min_count = max_count = 0
+    
+    for i in scores:
+        if i < min_score:
+            min_score = i
+            min_count += 1
+        elif i > max_score:
+            max_score = i
+            max_count += 1
+            
+    return max_count, min_count
+
 /** Apple and Orange**/
+
+
+
+
 
 
 def countApplesAndOranges(s, t, a, b, apples, oranges):
