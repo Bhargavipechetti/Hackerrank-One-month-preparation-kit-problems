@@ -15,11 +15,12 @@ def breakingRecords(scores):
             
     return max_count, min_count
 
+
+
+
+
+
 /** Apple and Orange**/
-
-
-
-
 
 
 def countApplesAndOranges(s, t, a, b, apples, oranges):
